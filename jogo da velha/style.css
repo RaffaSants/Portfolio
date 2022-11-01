@@ -29,16 +29,53 @@ body{
 .header img{
   height: 30px;
   margin-right: 10px;
-
 }
 .header span{
   color:darkblue;
 }
-/*====================== Content ======================*/
+/*====================== Content ====================*/
 .content{
   height: 90vh;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+.options{
+  visibility: hidden;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: absolute
+}
+.options.show{
+  visibility: visible;
+}
+.buton{
+  display: block;
+  margin-top: 95px;
+  height: 450px;
+  width: 450px;
+  background-color: rgba(0, 37, 250, 0.315);
+}
+#play {
+  display: block;
+  margin-top: 45%;
+  margin-left: 20%;
+  height: 50px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  background-color:rgb(217, 236, 253);
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(2, 165, 165);
+  transition: 0.5s;
+  cursor: pointer;
+}
+#play:hover{
+  background-color: rgb(1, 155, 155);
+  color: azure;
 }
 .board{
   background-color: var(--color-base);
