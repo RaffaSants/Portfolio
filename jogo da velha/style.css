@@ -1,0 +1,79 @@
+/*============Reset page Html========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*================= VARIABLES ======================*/
+:root{
+  --hue:200;
+  --color-base:hsl(var(--hue),85%,95%);
+  --color-secondary:hsl(var(--hue),80%,90%);
+  --font-color-base:hsl(var(--hue),0%,0%);
+  --font-color-secondary:hsl(var(--hue),255%,255%);
+}
+/*================= Header ===================*/
+body{
+  font-family: sans-serif;
+  background-color: var(--color-base);
+}
+.header{
+  height: 50px;
+  background-color: var(--color-secondary);
+  justify-content: center;
+  display: flex;
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+.header img{
+  height: 30px;
+  margin-right: 10px;
+
+}
+.header span{
+  color:darkblue;
+}
+/*====================== Content ======================*/
+.content{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+.board{
+  background-color: var(--color-base);
+  height: 450px;
+  width: 450px;
+  display: block;
+  margin: auto;
+}
+.turn{
+  margin-bottom: 2px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.turn img{
+  height: 14px;
+}
+.row{
+  display: flex;
+  background-color: var(--color-secondary);
+}
+.house{
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+#A1, #A2, #A3,
+#B1, #B2, #B3{
+  border-bottom: solid 1px var(--color-base);
+}
+#A1, #B1, #C1,
+#A2, #B2, #C2{
+border-right: solid 1px var(--color-base);
+}
+.house img{
+  margin: auto;
+  display: block;
+}
