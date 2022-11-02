@@ -15,19 +15,28 @@
     <span>JOGO DA VELHA</span> 
   </div>
   <div class="content">
-    <div class="options">
-      <div class="buton">
-        <button type="button" id="play">
-          Jogar
-        </button>
+    <div class="cards show" id="home">
+      <div class="card">
+        <div class="bt">
+          <button type="button" id="play">
+            Jogar
+          </button>
+        </div>
       </div>
-      <div class="result">
-        <button type="button" id="play-again">
-          Jogar novamente
-        </button>
-        <button type="button" id="exit">
-          Jogar
-        </button>
+      <div class="cards" id="end">
+        <div class="card">
+          <div class="result">
+            <div class="msg" id="winner">
+              <span>O jogador </span><img src="" alt="" id="play-winner"><span> venceu a partida.</span>
+            </div>
+            <div class="msg" id="draw">
+              <span>O jogo deu velha!</span>
+            </div>
+          </div>
+          <button type="button" id="play-again">
+            Jogar novamente
+          </button>
+        </div>
       </div>
     </div>
     <div class="board">
@@ -35,42 +44,43 @@
       <span>
         Está na vez do jogador:
       </span>
-      <img src="/jogo da velha/assets/x-mark-16.ico" alt="x">
+      <img src="" alt="" id="turn">
       </div>
       <div class="row">
-        <div class="house" id="A1">
-          <img src="/jogo da velha/assets/circle-outline-64.ico" alt="">
-        </div>
-        <div class="house" id="A2">
-          <img src="/jogo da velha/assets/x-mark-64.ico" alt="">
-        </div>
-        <div class="house" id="A3">
+        <div class="house" id="A1" jogada="">
           <img src="" alt="">
         </div>
-      </div>
-      <div class="row">
-        <div class="house" id="B1">
+        <div class="house" id="A2" jogada="">
           <img src="" alt="">
         </div>
-        <div class="house" id="B2">
-          <img src="" alt="">
-        </div>
-        <div class="house" id="B3">
+        <div class="house" id="A3" jogada="">
           <img src="" alt="">
         </div>
       </div>
       <div class="row">
-        <div class="house" id="C1">
+        <div class="house" id="B1" jogada="">
           <img src="" alt="">
         </div>
-        <div class="house" id="C2">
+        <div class="house" id="B2" jogada="">
           <img src="" alt="">
         </div>
-        <div class="house" id="C3">
+        <div class="house" id="B3" jogada="">
+          <img src="" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="house" id="C1" jogada="">
+          <img src="" alt="">
+        </div>
+        <div class="house" id="C2" jogada="">
+          <img src="" alt="">
+        </div>
+        <div class="house" id="C3" jogada="">
           <img src="" alt="">
         </div>
       </div>
     </div>
   </div>
+  <script src="/jogo da velha/app.js"></script>
 </body>
 </html>

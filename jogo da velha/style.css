@@ -40,25 +40,56 @@ body{
   justify-content: center;
   position: relative;
 }
-.options{
+.cards{
   visibility: hidden;
   height: 90vh;
   width: 100vw;
   display: flex;
   justify-content: center;
-  position: absolute
+  position: absolute;
+  transition: 0.8s;
 }
-.options.show{
+.cards.show{
   visibility: visible;
 }
-.buton{
+.card{
   display: block;
   margin-top: 95px;
   height: 450px;
   width: 450px;
   background-color: rgba(0, 37, 250, 0.315);
 }
-#play {
+.result{
+  background-color: rgba(2, 71, 71, 0.966);
+  margin-top: 40px;
+  height: 100px;
+  width: 90%;
+  margin-left: 5%;
+  font-size: 30px;
+  color:aqua;
+  display: flex;
+}
+#winner{
+  visibility: hidden;
+}
+#winner.show{
+  visibility: visible;
+  display: block;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 5px;
+}
+#draw{
+  visibility: hidden;
+}
+#draw.show{
+  visibility: visible;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 80px;
+  color: rgba(255, 67, 67, 0.986);
+}
+button{
   display: block;
   margin-top: 45%;
   margin-left: 20%;
@@ -67,13 +98,17 @@ body{
   border: none;
   border-radius: 5px;
   background-color:rgb(217, 236, 253);
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   color: rgb(2, 165, 165);
   transition: 0.5s;
   cursor: pointer;
 }
-#play:hover{
+#play-again{
+  margin-top: 70px;
+}
+
+button:hover{
   background-color: rgb(1, 155, 155);
   color: azure;
 }
@@ -89,7 +124,7 @@ body{
   font-size: 20px;
   font-weight: bold;
 }
-.turn img{
+turn img{
   height: 14px;
 }
 .row{
