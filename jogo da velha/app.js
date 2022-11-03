@@ -2,6 +2,7 @@ const card_home = document.getElementById("home")
 const bt_play = document.getElementById("play")
 
 const turn = document.getElementById("turn")
+const turn_img = document.getElementById("turn-img")
 const house = document.getElementsByClassName("house")
 
 const card_end = document.getElementById("end")
@@ -19,7 +20,8 @@ var turn_play = 'x'
 
 bt_play.addEventListener("click", function(){
   card_home.classList.toggle("show")
-  turn.setAttribute('src', img_turn_x)
+  turn.classList.add("show")
+  turn_img.setAttribute('src', img_turn_x)
 })
 
 for(const i of house){
@@ -31,14 +33,14 @@ for(const i of house){
       if(turn_play =="x"){
         i.setAttribute('jogada','x')
         img_house.setAttribute('src', img_play_x)
-        turn.setAttribute('src', img_turn_o)
+        turn_img.setAttribute('src', img_turn_o)
         turn_play = "o"
         CheckPlay(img_turn_x)
       }
       else if(turn_play =="o"){
         i.setAttribute('jogada', 'o')
         img_house.setAttribute('src', img_play_o)
-        turn.setAttribute('src', img_turn_x)
+        turn_img.setAttribute('src', img_turn_x)
         turn_play = 'x'
         CheckPlay(img_turn_o)
       }
@@ -72,6 +74,7 @@ async function CheckPlay(jogador){
     winner.setAttribute('src', jogador)
     card_winner.classList.add('show')
     card_end.classList.add("show")
+    turn.classList.remove("show")
   }
   else if (
     (A1 != '' && A2 != '' && A3 != '' &&
@@ -88,9 +91,10 @@ bt_play_again.addEventListener('click', function(){
     house[i].childNodes[1].setAttribute('src','')
     house[i].setAttribute('jogada','')
     turn_play = 'x'
-    turn.setAttribute('src', img_turn_x)
+    turn_img.setAttribute('src', img_turn_x)
     card_end.classList.remove("show")
     card_winner.classList.remove("show")
     card_draw.classList.remove("show")
+    turn.classList.add("show")
   }
 })

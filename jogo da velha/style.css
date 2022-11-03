@@ -7,31 +7,36 @@
 /*================= VARIABLES ======================*/
 :root{
   --hue:200;
-  --color-base:hsl(var(--hue),85%,95%);
-  --color-secondary:hsl(var(--hue),80%,90%);
+  --color-base:hsl(var(--hue),30%,80%);
+  --color-2:hsl(var(--hue),10%,80%);
+  --color-3:hsl(var(--hue),20%,100%);
   --font-color-base:hsl(var(--hue),0%,0%);
   --font-color-secondary:hsl(var(--hue),255%,255%);
 }
 /*================= Header ===================*/
 body{
   font-family: sans-serif;
-  background-color: var(--color-base);
+  background-color: var(--color-2);
 }
 .header{
-  height: 50px;
-  background-color: var(--color-secondary);
+  height: 75px;
+  background-color: var(--color-3);
   justify-content: center;
   display: flex;
   font-size: 25px;
   font-weight: bold;
   padding-top: 10px;
+  border-bottom: solid 1px var(--color-base);
 }
 .header img{
-  height: 30px;
+  height: 50px;
   margin-right: 10px;
 }
-.header span{
-  color:darkblue;
+.letter-1{
+  color:rgb(15, 133, 230);
+}
+.letter-2{
+  color: rgba(255, 0, 0, 0.952);
 }
 /*====================== Content ====================*/
 .content{
@@ -54,19 +59,19 @@ body{
 }
 .card{
   display: block;
-  margin-top: 95px;
+  margin-top: 70px;
   height: 450px;
   width: 450px;
-  background-color: rgba(0, 37, 250, 0.315);
+  background-color: rgba(0, 37, 250, 0.151);
 }
 .result{
-  background-color: rgba(2, 71, 71, 0.966);
-  margin-top: 40px;
-  height: 100px;
-  width: 90%;
-  margin-left: 5%;
+  background-color: rgba(2, 71, 71, 0.144);
+  margin-top: px;
+  height: 150px;
+  width: 100%;
+  text-align: center;
   font-size: 30px;
-  color:aqua;
+  color:aliceblue;
   display: flex;
 }
 #winner{
@@ -76,8 +81,8 @@ body{
   visibility: visible;
   display: block;
   position: absolute;
-  margin-top: 30px;
-  margin-left: 5px;
+  margin-top: 50px;
+  margin-left: 25px;
 }
 #draw{
   visibility: hidden;
@@ -85,9 +90,9 @@ body{
 #draw.show{
   visibility: visible;
   position: absolute;
-  margin-top: 30px;
-  margin-left: 80px;
-  color: rgba(255, 67, 67, 0.986);
+  margin-top: 50px;
+  margin-left: 100px;
+  color: rgba(255, 255, 255, 0.986);
 }
 button{
   display: block;
@@ -105,9 +110,8 @@ button{
   cursor: pointer;
 }
 #play-again{
-  margin-top: 70px;
+  margin-top: 50px;
 }
-
 button:hover{
   background-color: rgb(1, 155, 155);
   color: azure;
@@ -118,13 +122,21 @@ button:hover{
   width: 450px;
   display: block;
   margin: auto;
+
 }
-.turn{
-  margin-bottom: 2px;
+#turn{
+  margin-top: 43px;
+  width: 450px;
   font-size: 20px;
   font-weight: bold;
+  background-color: var(--color-2);
+  visibility: hidden;
+  position: absolute;
 }
-turn img{
+#turn.show{
+  visibility: visible;
+}
+#turn-img{
   height: 14px;
 }
 .row{
@@ -139,11 +151,11 @@ turn img{
 }
 #A1, #A2, #A3,
 #B1, #B2, #B3{
-  border-bottom: solid 1px var(--color-base);
+  border-bottom: solid 1px var(--color-3);
 }
 #A1, #B1, #C1,
 #A2, #B2, #C2{
-border-right: solid 1px var(--color-base);
+border-right: solid 1px var(--color-3);
 }
 .house img{
   margin: auto;
