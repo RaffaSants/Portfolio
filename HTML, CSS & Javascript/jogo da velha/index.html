@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da velha</title>
+  
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="header">
+    <img src="assets/jogo-da-velha.png" alt="">
+    <h2>
+      <strong class="letter-1">J</strong><strong class="letter-2">o</strong
+      ><strong class="letter-1">g</strong><strong class="letter-2">o </strong
+      ><strong class="letter-1">d</strong><strong class="letter-2">a </strong
+      ><strong class="letter-1">v</strong><strong class="letter-2">e</strong
+      ><strong class="letter-1">l</strong><strong class="letter-2">h</strong
+      ><strong class="letter-1">a</strong>
+    </h2> 
+  </div>
+  <div class="content">
+    <div class="cards show" id="home">
+      <div class="card">
+        <div class="bt">
+          <button type="button" id="play">
+            Jogar
+          </button>
+        </div>
+      </div>
+      <div class="cards" id="end">
+        <div class="card">
+          <div class="result">
+            <div class="msg" id="winner">
+              <span>O jogador </span><img src="" alt="" id="play-winner"><span> venceu a partida.</span>
+            </div>
+            <div class="msg" id="draw">
+              <span>O jogo deu velha!</span>
+            </div>
+          </div>
+          <button type="button" id="play-again">
+            Jogar novamente
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="turn">
+    <span>
+      Está na vez do jogador:
+    </span>
+    <img src="" alt="" id="turn-img">
+    </div>
+    <div class="board">
+      <div class="row">
+        <div class="house" id="A1" jogada="">
+          <img src="" alt="">
+        </div>
+        <div class="house" id="A2" jogada="">
+          <img src="" alt="">
+        </div>
+        <div class="house" id="A3" jogada="">
+          <img src="" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="house" id="B1" jogada="">
+          <img src="" alt="">
+        </div>
+        <div class="house" id="B2" jogada="">
+          <img src="" alt="">
+        </div>
+        <div class="house" id="B3" jogada="">
+          <img src="" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="house" id="C1" jogada="">
+          <img src="" alt="">
+        </div>
+        <div class="house" id="C2" jogada="">
+          <img src="" alt="">
+        </div>
+        <div class="house" id="C3" jogada="">
+          <img src="" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

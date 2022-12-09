@@ -1,0 +1,163 @@
+/*============Reset page Html========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*================= VARIABLES ======================*/
+:root{
+  --hue:200;
+  --color-base:hsl(var(--hue),30%,80%);
+  --color-2:hsl(var(--hue),10%,80%);
+  --color-3:hsl(var(--hue),20%,100%);
+  --font-color-base:hsl(var(--hue),0%,0%);
+  --font-color-secondary:hsl(var(--hue),255%,255%);
+}
+/*================= Header ===================*/
+body{
+  font-family: sans-serif;
+  background-color: var(--color-2);
+}
+.header{
+  height: 75px;
+  background-color: var(--color-3);
+  justify-content: center;
+  display: flex;
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 10px;
+  border-bottom: solid 1px var(--color-base);
+}
+.header img{
+  height: 50px;
+  margin-right: 10px;
+}
+.letter-1{
+  color:rgb(15, 133, 230);
+}
+.letter-2{
+  color: rgba(255, 0, 0, 0.952);
+}
+/*====================== Content ====================*/
+.content{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.cards{
+  visibility: hidden;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  transition: 0.8s;
+}
+.cards.show{
+  visibility: visible;
+}
+.card{
+  display: block;
+  margin-top: 70px;
+  height: 450px;
+  width: 450px;
+  background-color: rgba(0, 37, 250, 0.151);
+}
+.result{
+  background-color: rgba(2, 71, 71, 0.144);
+  margin-top: px;
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  color:aliceblue;
+  display: flex;
+}
+#winner{
+  visibility: hidden;
+}
+#winner.show{
+  visibility: visible;
+  display: block;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 25px;
+}
+#draw{
+  visibility: hidden;
+}
+#draw.show{
+  visibility: visible;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 100px;
+  color: rgba(255, 255, 255, 0.986);
+}
+button{
+  display: block;
+  margin-top: 45%;
+  margin-left: 20%;
+  height: 50px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  background-color:rgb(217, 236, 253);
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(2, 165, 165);
+  transition: 0.5s;
+  cursor: pointer;
+}
+#play-again{
+  margin-top: 50px;
+}
+button:hover{
+  background-color: rgb(1, 155, 155);
+  color: azure;
+}
+.board{
+  background-color: var(--color-base);
+  height: 450px;
+  width: 450px;
+  display: block;
+  margin: auto;
+
+}
+#turn{
+  margin-top: 43px;
+  width: 450px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--color-2);
+  visibility: hidden;
+  position: absolute;
+}
+#turn.show{
+  visibility: visible;
+}
+#turn-img{
+  height: 14px;
+}
+.row{
+  display: flex;
+  background-color: var(--color-secondary);
+}
+.house{
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+#A1, #A2, #A3,
+#B1, #B2, #B3{
+  border-bottom: solid 1px var(--color-3);
+}
+#A1, #B1, #C1,
+#A2, #B2, #C2{
+border-right: solid 1px var(--color-3);
+}
+.house img{
+  margin: auto;
+  display: block;
+}
