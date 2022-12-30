@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Memória</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar-dark bg-dark txt-cl-light text-center" style="height: 50px;" >
+    Jogo da Memória 
+  </nav>
+  <div class="conteiner bg-light d-flex" style="margin: 7% 5%;">
+    <div class="modal show" id="md">
+      <div class="dialog">
+        <div class="text"id='result'>
+          <p id="text"></p>
+        </div>
+        <div class="bt" id="bt">
+          <button type="button" class="btn btn-dark" id="bt_start">jogar</button>
+        </div>
+      </div>
+    </div>
+    <div class="scoreboard" id="scored-1">
+      <h4 class="mt-2" >Player 1:</h4> 
+      <hr>
+      <div class="row row-cols-2" id="player1" >
+      </div>
+    </div>
+    <div class="game-board w-50">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" id="1" ><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" id="2"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" id="3"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" id="4"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card " id="5"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false" ></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" id="6"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" id="7"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" id="8"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" id="9"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" id="10"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" id="11"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" id="12"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card" id="13"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" id="14"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" id="15"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+        <div class="col-md-3">
+          <div class="card" id="16"><img src="/jogo da memoria/imgs/capa.png" alt="" class="card-img" open="false"></div>
+        </div>
+      </div>
+    </div>
+    <div class="scoreboard" id="scored-2">
+      <h4 class="mt-2">Player 2:</h4>
+      <hr>
+      <div class="row row-cols-2" id="player2" >
+      </div>
+    </div>
+  </div>
+  
+  <script src="/jogo da memoria/js/game.js"></script>
+</body>
+</html>
